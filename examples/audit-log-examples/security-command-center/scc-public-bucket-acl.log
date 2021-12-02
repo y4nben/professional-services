@@ -1,0 +1,61 @@
+{
+  "notificationConfigName": "organizations/[ORG_ID]/notificationConfigs/scc-findings-notify",
+  "finding": {
+    "name": "organizations/[ORG_ID]/sources/7900328724435634724/findings/e45540854ec4cb83d0412e354248ae93",
+    "parent": "organizations/[ORG_ID]/sources/7900328724435634724",
+    "resourceName": "//storage.googleapis.com/leaky-suspicious-bucket",
+    "state": "INACTIVE",
+    "category": "PUBLIC_BUCKET_ACL",
+    "externalUri": "https://console.cloud.google.com/storage/browser/leaky-suspicious-bucket;tab\u003dpermissions",
+    "sourceProperties": {
+      "Recommendation": "Go to https://console.cloud.google.com/storage/browser/leaky-suspicious-bucket;tab\u003dpermissions and remove \"allUsers\" and \"allAuthenticatedUsers\" from the bucket\u0027s members.",
+      "ReactivationCount": 0.0,
+      "ExceptionInstructions": "Add the security mark \"allow_public_bucket_acl\" to the asset with a value of \"true\" to prevent this finding from being activated again.",
+      "Explanation": "This bucket is public and can be accessed by anyone on the Internet. \"allUsers\" represents anyone on the Internet, and \"allAuthenticatedUsers\" represents anyone who is authenticated with a Google account; neither is constrained to users within your organization.",
+      "ScannerName": "STORAGE_SCANNER",
+      "ResourcePath": ["projects/my-sandbox/", "folders/537072548021/", "organizations/[ORG_ID]/"],
+      "compliance_standards": {
+        "iso": [{
+          "ids": ["A.8.2.3", "A.14.1.3"]
+        }],
+        "pci": [{
+          "ids": ["7.1"]
+        }],
+        "cis": [{
+          "version": "1.0",
+          "ids": ["5.1"]
+        }, {
+          "version": "1.1",
+          "ids": ["5.1"]
+        }],
+        "nist": [{
+          "ids": ["AC-2"]
+        }]
+      },
+      "HasAdminRoles": false,
+      "HasEditRoles": false,
+      "gcloud_remediation": ["gsutil iam ch -d allUsers gs://leaky-suspicious-bucket", "gsutil iam ch -d allAuthenticatedUsers gs://leaky-suspicious-bucket"],
+      "cli_remediation": ["gsutil iam ch -d allUsers gs://leaky-suspicious-bucket", "gsutil iam ch -d allAuthenticatedUsers gs://leaky-suspicious-bucket"],
+      "DeactivationReason": "The asset was deleted."
+    },
+    "securityMarks": {
+      "name": "organizations/[ORG_ID]/sources/7900328724435634724/findings/e45540854ec4cb83d0412e354248ae93/securityMarks"
+    },
+    "eventTime": "2021-08-23T21:46:07.606821Z",
+    "createTime": "2021-08-23T20:54:07.653Z",
+    "severity": "HIGH",
+    "canonicalName": "projects/268323096258/sources/7900328724435634724/findings/e45540854ec4cb83d0412e354248ae93"
+  },
+  "resource": {
+    "name": "//storage.googleapis.com/leaky-suspicious-bucket",
+    "project": "//cloudresourcemanager.googleapis.com/projects/268323096258",
+    "projectDisplayName": "my-sandbox",
+    "parent": "//cloudresourcemanager.googleapis.com/projects/268323096258",
+    "parentDisplayName": "my-sandbox",
+    "type": "google.cloud.storage.Bucket",
+    "folders": [{
+      "resourceFolder": "//cloudresourcemanager.googleapis.com/folders/537072548021",
+      "resourceFolderDisplayName": "Sandbox"
+    }]
+  }
+}
