@@ -1,0 +1,93 @@
+{
+  "protoPayload": {
+    "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+    "authenticationInfo": {
+      "principalEmail": "dylanrussell@enron.cloud"
+    },
+    "requestMetadata": {
+      "callerIp": "2002:a05:6208:2510:0:0:0:0",
+      "requestAttributes": {},
+      "destinationAttributes": {}
+    },
+    "serviceName": "oauth2.googleapis.com",
+    "methodName": "google.identity.oauth2.GetToken",
+    "resourceName": "organizations/783371620496",
+    "metadata": {
+      "@type": "type.googleapis.com/ccc_hosted_reporting.ActivityProto",
+      "event": [
+        {
+          "eventName": "authorize",
+          "parameter": [
+            {
+              "value": "1070009224336-sdh77n7uot3oc99ais00jmuft6sk2fg9.apps.googleusercontent.com",
+              "type": "TYPE_STRING",
+              "name": "client_id",
+              "label": "LABEL_OPTIONAL"
+            },
+            {
+              "name": "app_name",
+              "value": "Android device",
+              "type": "TYPE_STRING",
+              "label": "LABEL_OPTIONAL"
+            },
+            {
+              "type": "TYPE_STRING",
+              "name": "client_type",
+              "value": "NATIVE_ANDROID",
+              "label": "LABEL_OPTIONAL"
+            },
+            {
+              "name": "scope_data",
+              "label": "LABEL_REPEATED",
+              "multiMsgValue": [
+                {
+                  "parameter": [
+                    {
+                      "name": "scope_name",
+                      "label": "LABEL_OPTIONAL",
+                      "value": "https://www.google.com/accounts/OAuthLogin",
+                      "type": "TYPE_STRING"
+                    },
+                    {
+                      "multiStrValue": [
+                        "IDENTITY"
+                      ],
+                      "name": "product_bucket",
+                      "label": "LABEL_REPEATED",
+                      "type": "TYPE_STRING"
+                    }
+                  ]
+                }
+              ],
+              "type": "TYPE_MESSAGE"
+            },
+            {
+              "name": "scope",
+              "label": "LABEL_REPEATED",
+              "multiStrValue": [
+                "https://www.google.com/accounts/OAuthLogin"
+              ],
+              "type": "TYPE_STRING"
+            }
+          ]
+        }
+      ],
+      "activityId": {
+        "uniqQualifier": "-757071304290730812",
+        "timeUsec": "1627998175892264"
+      }
+    }
+  },
+  "insertId": "xav0quc1vk",
+  "resource": {
+    "type": "audited_resource",
+    "labels": {
+      "method": "google.identity.oauth2.GetToken",
+      "service": "oauth2.googleapis.com"
+    }
+  },
+  "timestamp": "2021-08-03T13:42:55.892264Z",
+  "severity": "NOTICE",
+  "logName": "organizations/783371620496/logs/cloudaudit.googleapis.com%2Factivity",
+  "receiveTimestamp": "2021-08-03T13:44:14.072488015Z"
+}

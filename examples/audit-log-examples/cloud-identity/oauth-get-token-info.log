@@ -1,0 +1,85 @@
+{
+  "protoPayload": {
+    "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+    "authenticationInfo": {
+      "principalEmail": "dylanrussell@enron.cloud"
+    },
+    "requestMetadata": {
+      "callerIp": "107.178.192.140",
+      "requestAttributes": {},
+      "destinationAttributes": {}
+    },
+    "serviceName": "oauth2.googleapis.com",
+    "methodName": "google.identity.oauth2.GetTokenInfo",
+    "resourceName": "organizations/783371620496",
+    "metadata": {
+      "activityId": {
+        "uniqQualifier": "-2467489048723497667",
+        "timeUsec": "1634844672216299"
+      },
+      "@type": "type.googleapis.com/ccc_hosted_reporting.ActivityProto",
+      "event": [
+        {
+          "parameter": [
+            {
+              "label": "LABEL_OPTIONAL",
+              "name": "api_name",
+              "type": "TYPE_STRING",
+              "value": "calendar"
+            },
+            {
+              "type": "TYPE_STRING",
+              "label": "LABEL_OPTIONAL",
+              "value": "calendar.events.insert",
+              "name": "method_name"
+            },
+            {
+              "label": "LABEL_OPTIONAL",
+              "value": "101859618418-giovfoph1j1pd36vdopu8dk54ub86jh5.apps.googleusercontent.com",
+              "name": "client_id",
+              "type": "TYPE_STRING"
+            },
+            {
+              "type": "TYPE_INT64",
+              "intValue": "1154",
+              "name": "num_response_bytes",
+              "label": "LABEL_OPTIONAL"
+            },
+            {
+              "type": "TYPE_STRING",
+              "label": "LABEL_OPTIONAL",
+              "value": "CALENDAR",
+              "name": "product_bucket"
+            },
+            {
+              "name": "app_name",
+              "value": "Calendar Events Creator",
+              "type": "TYPE_STRING",
+              "label": "LABEL_OPTIONAL"
+            },
+            {
+              "name": "client_type",
+              "type": "TYPE_STRING",
+              "value": "WEB",
+              "label": "LABEL_OPTIONAL"
+            }
+          ],
+          "eventType": "auth",
+          "eventName": "activity"
+        }
+      ]
+    }
+  },
+  "insertId": "-j52zhgc4f0",
+  "resource": {
+    "type": "audited_resource",
+    "labels": {
+      "method": "google.identity.oauth2.GetTokenInfo",
+      "service": "oauth2.googleapis.com"
+    }
+  },
+  "timestamp": "2021-10-21T19:31:12.216299Z",
+  "severity": "NOTICE",
+  "logName": "organizations/783371620496/logs/cloudaudit.googleapis.com%2Fdata_access",
+  "receiveTimestamp": "2021-10-21T19:31:42.399877715Z"
+}

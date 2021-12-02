@@ -1,0 +1,93 @@
+{
+  "protoPayload": {
+    "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+    "authenticationInfo": {
+      "principalEmail": "test.nonadminuser@enron.cloud"
+    },
+    "requestMetadata": {
+      "callerIp": "71.198.145.18",
+      "requestAttributes": {},
+      "destinationAttributes": {}
+    },
+    "serviceName": "oauth2.googleapis.com",
+    "methodName": "google.identity.oauth2.RevokeToken",
+    "resourceName": "organizations/783371620496",
+    "metadata": {
+      "event": [
+        {
+          "parameter": [
+            {
+              "name": "client_id",
+              "label": "LABEL_OPTIONAL",
+              "type": "TYPE_STRING",
+              "value": "77185425430.apps.googleusercontent.com"
+            },
+            {
+              "label": "LABEL_OPTIONAL",
+              "name": "app_name",
+              "type": "TYPE_STRING",
+              "value": "Google Chrome"
+            },
+            {
+              "type": "TYPE_STRING",
+              "value": "NATIVE_DESKTOP",
+              "label": "LABEL_OPTIONAL",
+              "name": "client_type"
+            },
+            {
+              "type": "TYPE_MESSAGE",
+              "label": "LABEL_REPEATED",
+              "name": "scope_data",
+              "multiMsgValue": [
+                {
+                  "parameter": [
+                    {
+                      "type": "TYPE_STRING",
+                      "name": "scope_name",
+                      "value": "https://www.google.com/accounts/OAuthLogin",
+                      "label": "LABEL_OPTIONAL"
+                    },
+                    {
+                      "name": "product_bucket",
+                      "type": "TYPE_STRING",
+                      "label": "LABEL_REPEATED",
+                      "multiStrValue": [
+                        "IDENTITY"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TYPE_STRING",
+              "label": "LABEL_REPEATED",
+              "multiStrValue": [
+                "https://www.google.com/accounts/OAuthLogin"
+              ],
+              "name": "scope"
+            }
+          ],
+          "eventName": "revoke"
+        }
+      ],
+      "@type": "type.googleapis.com/ccc_hosted_reporting.ActivityProto",
+      "activityId": {
+        "timeUsec": "1632951636159945",
+        "uniqQualifier": "-1014032929075974609"
+      }
+    }
+  },
+  "insertId": "-5th7fvc4le",
+  "resource": {
+    "type": "audited_resource",
+    "labels": {
+      "service": "oauth2.googleapis.com",
+      "method": "google.identity.oauth2.RevokeToken"
+    }
+  },
+  "timestamp": "2021-09-29T21:40:36.159945Z",
+  "severity": "NOTICE",
+  "logName": "organizations/783371620496/logs/cloudaudit.googleapis.com%2Factivity",
+  "receiveTimestamp": "2021-09-29T21:42:11.946489887Z"
+}
