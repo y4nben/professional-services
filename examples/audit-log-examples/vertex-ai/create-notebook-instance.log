@@ -1,0 +1,64 @@
+{
+  "protoPayload": {
+    "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+    "status": {},
+    "authenticationInfo": {
+      "principalEmail": "principalName@domain.com"
+    },
+    "requestMetadata": {
+      "callerIp": "8.8.8.8",
+      "callerSuppliedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36,gzip(gfe),gzip(gfe)",
+      "requestAttributes": {
+        "time": "2022-05-11T15:17:40.135953849Z",
+        "auth": {}
+      },
+      "destinationAttributes": {}
+    },
+    "serviceName": "notebooks.googleapis.com",
+    "methodName": "google.cloud.notebooks.v1.NotebookService.CreateInstance",
+    "authorizationInfo": [
+      {
+        "resource": "projects/projectId/locations/us-west1-b/instances/notebookName",
+        "permission": "notebooks.instances.create",
+        "granted": true,
+        "resourceAttributes": {
+          "service": "notebooks.googleapis.com",
+          "name": "projects/projectId/locations/us-west1-b/instances/notebookName"
+        }
+      }
+    ],
+    "resourceName": "projects/projectId/locations/us-west1-b/instances/notebookName",
+    "request": {
+      "instance_id": "notebookName",
+      "instance": {},
+      "@type": "type.googleapis.com/google.cloud.notebooks.v1.CreateInstanceRequest",
+      "parent": "projects/projectId/locations/us-west1-b"
+    },
+    "response": {
+      "@type": "type.googleapis.com/google.longrunning.Operation"
+    },
+    "resourceLocation": {
+      "currentLocations": [
+        "us-west1-b"
+      ]
+    }
+  },
+  "insertId": "9pvd7mcu69",
+  "resource": {
+    "type": "audited_resource",
+    "labels": {
+      "service": "notebooks.googleapis.com",
+      "project_id": "projectId",
+      "method": "google.cloud.notebooks.v1.NotebookService.CreateInstance"
+    }
+  },
+  "timestamp": "2022-05-11T15:17:40.250318996Z",
+  "severity": "NOTICE",
+  "logName": "projects/projectId/logs/cloudaudit.googleapis.com%2Factivity",
+  "operation": {
+    "id": "projects/projectId/locations/us-west1-b/operations/operation-1652282260144-5debdf12f408a-222674de-4946bb9e",
+    "producer": "notebooks.googleapis.com",
+    "first": true
+  },
+  "receiveTimestamp": "2022-05-11T15:17:41.150938541Z"
+}

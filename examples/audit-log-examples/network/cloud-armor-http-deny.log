@@ -1,0 +1,40 @@
+{
+  "insertId": "crtedwfbrpeua",
+  "jsonPayload": {
+    "enforcedSecurityPolicy": {
+      "name": "test-setup",
+      "priority": 500,
+      "configuredAction": "DENY",
+      "outcome": "DENY"
+    },
+    "statusDetails": "denied_by_security_policy",
+    "@type": "type.googleapis.com/google.cloud.loadbalancing.type.LoadBalancerLogEntry"
+  },
+  "httpRequest": {
+    "requestMethod": "GET",
+    "requestUrl": "https://TEST.net/",
+    "requestSize": "31",
+    "status": 403,
+    "responseSize": "260",
+    "userAgent": "curl/7.74.0",
+    "remoteIp": "123.123.123.123",
+    "latency": "0.134081s"
+  },
+  "resource": {
+    "type": "http_load_balancer",
+    "labels": {
+      "project_id": "project-id",
+      "forwarding_rule_name": "testurl",
+      "backend_service_name": "testurl",
+      "target_proxy_name": "testurl-target-proxy",
+      "url_map_name": "testurl",
+      "zone": "global"
+    }
+  },
+  "timestamp": "2022-03-31T16:33:13.071053Z",
+  "severity": "WARNING",
+  "logName": "projects/project-id/logs/requests",
+  "trace": "projects/project-id/traces/fadedf466df2eafa95f2fae10b923bda",
+  "receiveTimestamp": "2022-03-31T16:33:14.073094346Z",
+  "spanId": "760f29711efaaeb7"
+}

@@ -1,0 +1,43 @@
+{
+  "protoPayload": {
+    "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+    "status": {},
+    "authenticationInfo": {
+      "principalEmail": "principalName@domain.com"
+    },
+    "requestMetadata": {
+      "callerIp": "8.8.8.8",
+      "callerSuppliedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36,gzip(gfe),gzip(gfe)",
+      "requestAttributes": {},
+      "destinationAttributes": {}
+    },
+    "serviceName": "bigquery.googleapis.com",
+    "methodName": "tabledataservice.list",
+    "authorizationInfo": [
+      {
+        "resource": "projects/projectId",
+        "permission": "bigquery.jobs.create",
+        "granted": true,
+        "resourceAttributes": {}
+      }
+    ],
+    "resourceName": "projects/projectId/datasets/datasetId/tables/tableId/data",
+    "serviceData": {
+      "@type": "type.googleapis.com/google.cloud.bigquery.logging.v1.AuditData",
+      "tableDataListRequest": {
+        "maxResults": 1
+      }
+    }
+  },
+  "insertId": "mhjcrzdukr4",
+  "resource": {
+    "type": "bigquery_resource",
+    "labels": {
+      "project_id": "projectId"
+    }
+  },
+  "timestamp": "2022-05-16T22:22:30.462979Z",
+  "severity": "INFO",
+  "logName": "projects/projectId/logs/cloudaudit.googleapis.com%2Fdata_access",
+  "receiveTimestamp": "2022-05-16T22:22:31.479979985Z"
+}

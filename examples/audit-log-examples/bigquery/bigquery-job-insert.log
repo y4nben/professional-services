@@ -1,0 +1,105 @@
+{
+  "protoPayload": {
+    "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+    "status": {},
+    "authenticationInfo": {
+      "principalEmail": "principalName@domain.com"
+    },
+    "requestMetadata": {
+      "callerIp": "8.8.8.8",
+      "callerSuppliedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36,gzip(gfe),gzip(gfe)",
+      "requestAttributes": {},
+      "destinationAttributes": {}
+    },
+    "serviceName": "bigquery.googleapis.com",
+    "methodName": "jobservice.insert",
+    "authorizationInfo": [
+      {
+        "resource": "projects/projectId",
+        "permission": "bigquery.jobs.create",
+        "granted": true,
+        "resourceAttributes": {}
+      },
+      {
+        "resource": "projects/projectId/datasets/datasetId/tables/tableId",
+        "permission": "bigquery.tables.getData",
+        "granted": true,
+        "resourceAttributes": {}
+      }
+    ],
+    "resourceName": "projects/projectId/jobs",
+    "serviceData": {
+      "@type": "type.googleapis.com/google.cloud.bigquery.logging.v1.AuditData",
+      "jobInsertRequest": {
+        "resource": {
+          "jobName": {
+            "projectId": "projectId",
+            "location": "US"
+          },
+          "jobConfiguration": {
+            "query": {
+              "query": "SELECT * \nFROM `projectId.datasetId.tableId` \nLIMIT 1000",
+              "destinationTable": {},
+              "createDisposition": "CREATE_IF_NEEDED",
+              "writeDisposition": "WRITE_EMPTY",
+              "defaultDataset": {},
+              "queryPriority": "QUERY_INTERACTIVE"
+            },
+            "dryRun": true
+          }
+        }
+      },
+      "jobInsertResponse": {
+        "resource": {
+          "jobName": {
+            "projectId": "projectId",
+            "location": "US"
+          },
+          "jobConfiguration": {
+            "query": {
+              "query": "SELECT * \nFROM `projectId.datasetId.tableId` \nLIMIT 1000",
+              "destinationTable": {
+                "projectId": "projectId",
+                "datasetId": "datasetId",
+                "tableId": "tableId"
+              },
+              "createDisposition": "CREATE_IF_NEEDED",
+              "writeDisposition": "WRITE_TRUNCATE",
+              "defaultDataset": {},
+              "queryPriority": "QUERY_INTERACTIVE",
+              "statementType": "SELECT"
+            },
+            "dryRun": true
+          },
+          "jobStatus": {
+            "state": "DONE",
+            "error": {}
+          },
+          "jobStatistics": {
+            "createTime": "2022-05-16T22:22:27.140Z",
+            "totalProcessedBytes": "2168",
+            "referencedTables": [
+              {
+                "projectId": "projectId",
+                "datasetId": "datasetId",
+                "tableId": "tableId"
+              }
+            ],
+            "totalTablesProcessed": 1
+          }
+        }
+      }
+    }
+  },
+  "insertId": "-rqe8tlevgoi3",
+  "resource": {
+    "type": "bigquery_resource",
+    "labels": {
+      "project_id": "projectId"
+    }
+  },
+  "timestamp": "2022-05-16T22:22:27.292832Z",
+  "severity": "INFO",
+  "logName": "projects/projectId/logs/cloudaudit.googleapis.com%2Fdata_access",
+  "receiveTimestamp": "2022-05-16T22:22:28.302284364Z"
+}
